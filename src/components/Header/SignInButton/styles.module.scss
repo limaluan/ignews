@@ -1,0 +1,39 @@
+.signInButton {
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: var(--gray-850);
+    border: 0;
+    padding: 0 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    font-weight: bold;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    svg:first-child {
+        margin-right: 1rem;
+        filter: invert(70%) sepia(34%) saturate(6899%) hue-rotate(104deg) brightness(100%) contrast(97%); // Green
+
+        &.notLoged {
+            filter: invert(66%) sepia(24%) saturate(1642%) hue-rotate(358deg) brightness(102%) contrast(84%); // Yellow
+        }
+    }
+
+    .closeIcon {
+        margin-left: 1rem;
+        filter: invert(47%) sepia(9%) saturate(443%) hue-rotate(202deg) brightness(95%) contrast(90%);
+    }
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
