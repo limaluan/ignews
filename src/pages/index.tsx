@@ -1,4 +1,5 @@
 import Head from "../../node_modules/next/head";
+import { GetStaticProps } from "../../node_modules/next/types/index";
 import { SubscribeButton } from "../components/SubscribeButton/index";
 import { stripe } from "../services/stripe";
 
@@ -34,7 +35,7 @@ export default function Home({ product }: IProductProps) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const price = await stripe.prices.retrieve('price_1JkEDkDSdEKAherRzFxVhaug');
 
   const product = {
